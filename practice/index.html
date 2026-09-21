@@ -1,102 +1,91 @@
-<!DOCTYPE html>
-<html lang="ms">
+<!doctype html>
+<html lang="ms" data-theme="light" data-language="bm">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Learn2Step4ward</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn2Step4ward — Belajar untuk Maju Kedepan">
+  <title>Latihan | Learn2Step4ward</title>
   <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/lesson.css"> <!-- Memasukkan CSS Latihan -->
-  <script>
-    if (localStorage.getItem('l2s4w_theme') === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    }
-  </script>
 </head>
-<body data-root="../">
-  <header class="site-header">
-    <div class="nav-container">
-      <a href="../index.html" class="logo-link">L2S4W</a>
-      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">☰</button>
-      <nav class="nav-menu" id="nav-menu">
-        <button id="theme-toggle" class="theme-btn">🌙 Gelap</button>
-        <div class="lang-switcher">
-          <button class="lang-btn active" data-lang="bm">BM</button>
-          <button class="lang-btn" data-lang="en">ENG</button>
+<body>
+
+<a class="skip-link" href="#main" data-i18n="skipContent">Langkau ke kandungan utama</a>
+<header class="site-header">
+  <div class="container">
+    <div class="site-header__top">
+      <a class="brand" href="../index.html">Learn2Step4ward</a>
+      <div class="header-actions">
+        <div class="lang-switch" aria-label="Language">
+          <button type="button" data-language="bm" aria-pressed="true">BM</button>
+          <button type="button" data-language="en" aria-pressed="false">ENG</button>
         </div>
-        <a href="../index.html" class="nav-link" data-i18n="navHome">Home</a>
-        <a href="../start-here.html" class="nav-link" data-i18n="navStart">Mula Di Sini</a>
-        <a href="resources/index.html" class="nav-link" data-i18n="navResources">Resources</a>
-        <a href="practice/index.html" class="nav-link" data-i18n="navPractice">Latihan</a>
-        <a href="../parents.html" class="nav-link" data-i18n="navParents">Ibu Bapa</a>
-        <a href="../about.html" class="nav-link" data-i18n="navAbout">Tentang</a>
-      </nav>
+        <div class="theme-switch" aria-label="Display theme">
+          <button type="button" data-theme-choice="light" aria-pressed="true"><span aria-hidden="true">☀️</span> <span data-i18n="light">Cerah</span></button>
+          <button type="button" data-theme-choice="dark" aria-pressed="false"><span aria-hidden="true">🌙</span> <span data-i18n="dark">Gelap</span></button>
+        </div>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav"><span aria-hidden="true">☰</span><span class="sr-only" data-i18n="menu">Menu</span></button>
+      </div>
     </div>
-  </header>
-  
-  <main class="main-content">
-    <div class="hero" style="border-top: 6px solid var(--primary);">
-      <h1 class="hero-title" data-i18n="pracTitle">Zon Latihan</h1>
-      <p class="hero-tagline" data-i18n="pracDesc">Pilih jenis latihan untuk menguji pemahaman kamu. Jangan takut membuat kesilapan!</p>
-    </div>
-
-    <!-- Layout 2x2 Grid Baru -->
-    <div class="practice-grid">
-      
-      <!-- Kad 1: Quick Practice (Hijau) -->
-      <div class="practice-hub-card level-1">
-        <div class="practice-icon-wrap">
-          <!-- RUANG IKON: Gantikan kod imej di bawah dengan ikon anda -->
-          <!-- <img src="../assets/images/icon-quick.png" alt="Latihan Pantas"> -->
-          ⚡
+    <nav class="site-nav" id="site-nav" data-site-nav data-open="false" aria-label="Main navigation">
+      <div class="nav-shell">
+        <div class="nav-group">
+          <div class="nav-group__label">Mula</div>
+          <ul class="nav-list">
+            <li><a href="../index.html" data-i18n="home">Home</a></li>
+            <li><a href="../start-here.html" data-i18n="startHere">Mula Di Sini</a></li>
+          </ul>
         </div>
-        <h2 data-i18n="pracQuick">Latihan Pantas</h2>
-        <p data-i18n="pracQuickDesc">Latihan pendek (5-10 soalan) untuk menguji asas pantas.</p>
-        <a href="quick-practice.html" class="btn btn-outline" data-i18n="btnStartPrac">Mula Latihan</a>
-      </div>
-      
-      <!-- Kad 2: Topic Practice (Jingga) -->
-      <div class="practice-hub-card level-2">
-        <div class="practice-icon-wrap">
-          <!-- RUANG IKON: Gantikan kod imej di bawah dengan ikon anda -->
-          <!-- <img src="../assets/images/icon-topic.png" alt="Latihan Topik"> -->
-          🎯
+        <div class="nav-group">
+          <div class="nav-group__label" data-i18n="subjects">Subjek</div>
+          <ul class="nav-list">
+            <li><a href="../subjects/bahasa-melayu/index.html" data-i18n="bahasaMelayu">Bahasa Melayu</a></li>
+            <li><a href="../subjects/english/index.html" data-i18n="english">English</a></li>
+            <li><a href="../subjects/matematik/index.html" data-i18n="mathematics">Matematik</a></li>
+            <li><a href="../subjects/sains/index.html" data-i18n="science">Sains</a></li>
+          </ul>
         </div>
-        <h2 data-i18n="pracTopic">Latihan Topik</h2>
-        <p data-i18n="pracTopicDesc">Latihan berfokus mengikut topik khusus setiap subjek.</p>
-        <a href="topic-practice.html" class="btn btn-outline" data-i18n="btnStartPrac">Mula Latihan</a>
-      </div>
-
-      <!-- Kad 3: Mixed Practice (Merah) -->
-      <div class="practice-hub-card level-3">
-        <div class="practice-icon-wrap">
-          <!-- RUANG IKON: Gantikan kod imej di bawah dengan ikon anda -->
-          <!-- <img src="../assets/images/icon-mixed.png" alt="Latihan Campuran"> -->
-          🔀
+        <div class="nav-group">
+          <div class="nav-group__label">Belajar</div>
+          <ul class="nav-list">
+            <li><a href="../practice/index.html" data-i18n="practice">Latihan</a></li>
+            <li><a href="../resources/index.html" data-i18n="resources">Resources</a></li>
+          </ul>
         </div>
-        <h2 data-i18n="pracMixed">Latihan Campuran</h2>
-        <p data-i18n="pracMixedDesc">Campuran pelbagai kemahiran. Uji jika kamu boleh pilih konsep yang betul.</p>
-        <a href="mixed-practice.html" class="btn btn-outline" data-i18n="btnStartPrac">Mula Latihan</a>
-      </div>
-
-      <!-- Kad 4: Challenge Zone (Ungu) -->
-      <div class="practice-hub-card level-4">
-        <div class="practice-icon-wrap">
-          <!-- RUANG IKON: Gantikan kod imej di bawah dengan ikon anda -->
-          <!-- <img src="../assets/images/icon-challenge.png" alt="Zon Cabaran"> -->
-          🏆
+        <div class="nav-group">
+          <div class="nav-group__label">Sokongan</div>
+          <ul class="nav-list">
+            <li><a href="../teachers/index.html" data-i18n="teachers">Teachers</a></li>
+            <li><a href="../parents/index.html" data-i18n="parents">Ibu Bapa</a></li>
+            <li><a href="../about.html" data-i18n="about">Tentang Kami</a></li>
+          </ul>
         </div>
-        <h2 data-i18n="pracChallenge">Zon KBAT</h2>
-        <p data-i18n="pracChallengeDesc">Soalan penaakulan dan penyelesaian masalah aras tinggi.</p>
-        <a href="challenge.html" class="btn btn-outline" data-i18n="btnStartPrac">Mula Latihan</a>
       </div>
+    </nav>
+  </div>
+</header>
 
-    </div>
-  </main>
 
-  <footer class="site-footer">
-    <p>&copy; Learn2Step4ward</p>
-  </footer>
-  <script src="../assets/js/app.js"></script>
-  <script src="../assets/js/language.js"></script>
+<main id="main"><div class="container breadcrumbs"><a href="../index.html" data-i18n="home">Home</a> › <span data-i18n="practice">Latihan</span></div>
+<section class="section"><div class="container"><div class="center"><h1 data-i18n="practiceTitle">Latihan</h1><p data-i18n="practiceIntro">Pilih cara kamu mahu berlatih.</p></div>
+<div class="grid grid--2">
+<div class="card"><h2 data-i18n="quickPractice">Quick Practice</h2><p>Latihan pendek untuk menguji asas.</p><div class="quick-links"><span>5 Soalan</span><span>10 Soalan</span><span>Kuiz Pantas</span></div></div>
+<div class="card"><h2 data-i18n="topicPractice">Topic Practice</h2><p>Latihan mengikut subjek dan topik.</p></div>
+<div class="card"><h2 data-i18n="mixedPractice">Mixed Practice</h2><p>Campuran beberapa kemahiran dalam satu latihan.</p></div>
+<div class="card"><h2 data-i18n="challenge">Challenge</h2><p>Soalan aplikasi, penyelesaian masalah dan penaakulan.</p></div>
+</div><div class="empty-state" style="margin-top:24px"><strong data-i18n="contentComing">Kandungan akan ditambah</strong><p>Bank soalan tidak direka dalam Phase 5.</p></div></div></section></main>
+
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <strong>Learn2Step4ward</strong>
+    <div>Belajar untuk Maju Kedepan</div>
+    <div class="footer-subjects" data-i18n="footerSubjects">Bahasa Melayu • English • Matematik • Sains</div>
+    <div class="muted" data-i18n="footerEducation">Bahan pembelajaran adalah untuk tujuan pendidikan dan pembelajaran kendiri.</div>
+    <div>© Learn2Step4ward</div>
+  </div>
+</footer>
+<script src="../assets/js/app.js" defer></script>
+<script src="../assets/js/language.js" defer></script>
+
 </body>
 </html>

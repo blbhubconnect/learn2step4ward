@@ -1,134 +1,131 @@
-<!DOCTYPE html>
-<html lang="ms">
+<!doctype html>
+<html lang="ms" data-theme="light" data-language="bm">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Learn2Step4ward - Belajar untuk Maju Kedepan</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bahan pembelajaran kendiri untuk membantu murid Tahun 4 memahami asas, mencuba latihan dan memperbaiki kesalahan langkah demi langkah.">
+  <title>Home | Learn2Step4ward</title>
   <link rel="stylesheet" href="assets/css/style.css">
-  <script>
-    if (localStorage.getItem('l2s4w_theme') === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    }
-  </script>
 </head>
-<body data-root="">
-  <header class="site-header">
-    <div class="nav-container">
-      <a href="index.html" class="logo-link">L2S4W</a>
-      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">☰</button>
-      <nav class="nav-menu" id="nav-menu">
-        <button id="theme-toggle" class="theme-btn">🌙 Gelap</button>
-        <div class="lang-switcher">
-          <button class="lang-btn active" data-lang="bm">BM</button>
-          <button class="lang-btn" data-lang="en">ENG</button>
+<body>
+
+<a class="skip-link" href="#main" data-i18n="skipContent">Langkau ke kandungan utama</a>
+<header class="site-header">
+  <div class="container">
+    <div class="site-header__top">
+      <a class="brand" href="index.html">Learn2Step4ward</a>
+      <div class="header-actions">
+        <div class="lang-switch" aria-label="Language">
+          <button type="button" data-language="bm" aria-pressed="true">BM</button>
+          <button type="button" data-language="en" aria-pressed="false">ENG</button>
         </div>
-        <a href="index.html" class="nav-link" data-i18n="navHome">Home</a>
-        <a href="start-here.html" class="nav-link" data-i18n="navStart">Mula Di Sini</a>
-        <a href="practice/index.html" class="nav-link" data-i18n="navPractice">Latihan</a>
-        <a href="resources/index.html" class="nav-link" data-i18n="navResources">Resources</a>
-        <a href="parents.html" class="nav-link" data-i18n="navParents">Ibu Bapa</a>
-        <a href="about.html" class="nav-link" data-i18n="navAbout">Tentang</a>
-      </nav>
+        <div class="theme-switch" aria-label="Display theme">
+          <button type="button" data-theme-choice="light" aria-pressed="true"><span aria-hidden="true">☀️</span> <span data-i18n="light">Cerah</span></button>
+          <button type="button" data-theme-choice="dark" aria-pressed="false"><span aria-hidden="true">🌙</span> <span data-i18n="dark">Gelap</span></button>
+        </div>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav"><span aria-hidden="true">☰</span><span class="sr-only" data-i18n="menu">Menu</span></button>
+      </div>
     </div>
-  </header>
-  <main class="main-content">
-    
-    <section class="hero">
-      <h1 class="hero-title" data-i18n="heroTitle">Learn2Step4ward</h1>
-      <p class="hero-tagline" data-i18n="heroTagline">Belajar untuk Maju Kedepan</p>
-      <p class="hero-desc" data-i18n="heroDesc">Bahan pembelajaran kendiri untuk membantu murid Tahun 4 memahami asas, mencuba latihan dan memperbaiki kesalahan langkah demi langkah.</p>
-      <div class="hero-actions">
-        <a href="start-here.html" class="btn btn-primary" data-i18n="startBtn">Mula Belajar</a>
-        <a href="#subjects" class="btn btn-outline" data-i18n="subjectBtn">Pilih Subjek</a>
+    <nav class="site-nav" id="site-nav" data-site-nav data-open="false" aria-label="Main navigation">
+      <div class="nav-shell">
+        <div class="nav-group">
+          <div class="nav-group__label">Mula</div>
+          <ul class="nav-list">
+            <li><a href="index.html" data-i18n="home">Home</a></li>
+            <li><a href="start-here.html" data-i18n="startHere">Mula Di Sini</a></li>
+          </ul>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group__label" data-i18n="subjects">Subjek</div>
+          <ul class="nav-list">
+            <li><a href="subjects/bahasa-melayu/index.html" data-i18n="bahasaMelayu">Bahasa Melayu</a></li>
+            <li><a href="subjects/english/index.html" data-i18n="english">English</a></li>
+            <li><a href="subjects/matematik/index.html" data-i18n="mathematics">Matematik</a></li>
+            <li><a href="subjects/sains/index.html" data-i18n="science">Sains</a></li>
+          </ul>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group__label">Belajar</div>
+          <ul class="nav-list">
+            <li><a href="practice/index.html" data-i18n="practice">Latihan</a></li>
+            <li><a href="resources/index.html" data-i18n="resources">Resources</a></li>
+          </ul>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group__label">Sokongan</div>
+          <ul class="nav-list">
+            <li><a href="teachers/index.html" data-i18n="teachers">Teachers</a></li>
+            <li><a href="parents/index.html" data-i18n="parents">Ibu Bapa</a></li>
+            <li><a href="about.html" data-i18n="about">Tentang Kami</a></li>
+          </ul>
+        </div>
       </div>
-    </section>
+    </nav>
+  </div>
+</header>
 
-    <section id="subjects" class="subject-grid">
-      <!-- BM -->
-      <div class="subject-card bm">
-        <div class="subject-icon-wrap">
-          <!-- <img src="assets/images/icon-bm.png" alt="Ikon BM"> -->
-          Ikon BM
-        </div>
-        <h2 class="subject-title" data-i18n="subjTitleBM">Bahasa Melayu</h2>
-        <p class="subject-tagline" data-i18n="subjTagBM">Fahami bahasa. Susun idea. Bina ayat dengan yakin.</p>
-        <ul class="subject-topics">
-          <li>Sistem Bahasa</li>
-          <li>Kosa Kata</li>
-          <li>Teknik SKOP</li>
-          <li>Kefahaman</li>
-          <li>Pemetaan Idea</li>
-          <li>Penulisan</li>
-        </ul>
-        <a href="subjects/bahasa-melayu/index.html" class="btn btn-outline" data-i18n="subjBtnBM">Belajar Bahasa Melayu</a>
-      </div>
-      
-      <!-- English -->
-      <div class="subject-card eng">
-        <div class="subject-icon-wrap">
-          <!-- <img src="assets/images/icon-eng.png" alt="Ikon English"> -->
-          Ikon ENG
-        </div>
-        <h2 class="subject-title" data-i18n="subjTitleEng">English</h2>
-        <p class="subject-tagline" data-i18n="subjTagEng">Read the clues. Understand the sentence. Build your answer.</p>
-        <ul class="subject-topics">
-          <li>Vocabulary</li>
-          <li>Grammar</li>
-          <li>Keyword Decoding</li>
-          <li>Reading Comprehension</li>
-          <li>Sentence Framing</li>
-          <li>Guided Writing</li>
-        </ul>
-        <a href="subjects/english/index.html" class="btn btn-outline" data-i18n="subjBtnEng">Learn English</a>
-      </div>
-      
-      <!-- Math -->
-      <div class="subject-card math">
-        <div class="subject-icon-wrap">
-          <!-- <img src="assets/images/icon-math.png" alt="Ikon Matematik"> -->
-          Ikon Math
-        </div>
-        <h2 class="subject-title" data-i18n="subjTitleMath">Matematik</h2>
-        <p class="subject-tagline" data-i18n="subjTagMath">Lihat. Faham. Modelkan. Kira.</p>
-        <ul class="subject-topics">
-          <li>Nombor & Nilai Tempat</li>
-          <li>Operasi (Tambah, Tolak, Darab, Bahagi)</li>
-          <li>Pecahan & Perpuluhan</li>
-          <li>Wang & Masa</li>
-          <li>Ukuran & Data</li>
-          <li>Bar Modeling & KBAT</li>
-        </ul>
-        <a href="subjects/matematik/index.html" class="btn btn-outline" data-i18n="subjBtnMath">Belajar Matematik</a>
-      </div>
-      
-      <!-- Sains -->
-      <div class="subject-card sains">
-        <div class="subject-icon-wrap">
-          <!-- <img src="assets/images/icon-sains.png" alt="Ikon Sains"> -->
-          Ikon Sains
-        </div>
-        <h2 class="subject-title" data-i18n="subjTitleSains">Sains</h2>
-        <p class="subject-tagline" data-i18n="subjTagSains">Perhati. Fikir. Cari bukti. Terangkan.</p>
-        <ul class="subject-topics">
-          <li>Konsep Asas Sains</li>
-          <li>Kemahiran Proses Sains (KPS)</li>
-          <li>Eksperimen</li>
-          <li>Claim-Evidence-Reasoning (CER)</li>
-          <li>Soalan Penaakulan</li>
-        </ul>
-        <a href="subjects/sains/index.html" class="btn btn-outline" data-i18n="subjBtnSains">Belajar Sains</a>
-      </div>
-    </section>
 
-  </main>
-  <footer class="site-footer">
-    <div class="footer-title">Learn2Step4ward</div>
-    <p data-i18n="heroTagline">Belajar untuk Maju Kedepan</p>
-    <p data-i18n="footerSubjects">Bahasa Melayu &bull; English &bull; Matematik &bull; Sains</p>
-    <p data-i18n="footerNote">Bahan pembelajaran adalah untuk tujuan pendidikan dan pembelajaran kendiri.</p>
-    <p>&copy; Learn2Step4ward</p>
-  </footer>
-  <script src="assets/js/app.js"></script>
-  <script src="assets/js/language.js"></script>
+<main id="main">
+  <section class="hero">
+    <div class="container">
+      <div class="hero__panel">
+        <div class="eyebrow">Learning Hub untuk Murid Tahun 4</div>
+        <h1 class="hero__title">Learn2Step4ward</h1>
+        <p><strong>Belajar untuk Maju Kedepan</strong></p>
+        <p>Bahan pembelajaran kendiri untuk membantu murid Tahun 4 memahami asas, mencuba latihan dan memperbaiki kesalahan langkah demi langkah.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="start-here.html" data-i18n="startLearning">Mula Belajar</a>
+          <a class="btn btn--secondary" href="subjects/index.html" data-i18n="chooseSubject">Pilih Subjek</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="subjects-heading">
+    <div class="container">
+      <div class="center"><div class="eyebrow" data-i18n="subjects">Subjek</div><h2 id="subjects-heading" data-i18n="chooseSubject">Pilih Subjek</h2></div>
+      <div class="subject-grid">
+        <article class="card subject-card subject-card--bm"><div class="subject-card__icon" aria-hidden="true">📝</div><h3>Bahasa Melayu</h3><p>Fahami bahasa. Susun idea. Bina ayat dengan yakin.</p><p class="subject-card__topics">Sistem Bahasa • SKOP • Kefahaman • Pemetaan Idea</p><a class="btn btn--secondary" href="subjects/bahasa-melayu/index.html" data-i18n="learnBM">Belajar Bahasa Melayu</a></article>
+        <article class="card subject-card subject-card--english"><div class="subject-card__icon" aria-hidden="true">🔤</div><h3>English</h3><p>Read the clues. Understand the sentence. Build your answer.</p><p class="subject-card__topics">Grammar • Keyword Decoding • Reading Comprehension</p><a class="btn btn--secondary" href="subjects/english/index.html" data-i18n="learnEnglish">Learn English</a></article>
+        <article class="card subject-card subject-card--math"><div class="subject-card__icon" aria-hidden="true">➗</div><h3>Matematik</h3><p>Lihat. Faham. Modelkan. Kira.</p><p class="subject-card__topics">Nombor • Operasi • Pecahan • Masa • Wang</p><a class="btn btn--secondary" href="subjects/matematik/index.html" data-i18n="learnMath">Belajar Matematik</a></article>
+        <article class="card subject-card subject-card--science"><div class="subject-card__icon" aria-hidden="true">🔬</div><h3>Sains</h3><p>Perhati. Fikir. Cari bukti. Terangkan.</p><p class="subject-card__topics">KPS • Pemerhatian • Inferens • Eksperimen</p><a class="btn btn--secondary" href="subjects/sains/index.html" data-i18n="learnScience">Belajar Sains</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="flow-heading">
+    <div class="container">
+      <div class="center"><h2 id="flow-heading" data-i18n="howLearningWorks">Cara Belajar di Learn2Step4ward</h2></div>
+      <div class="learning-flow">
+        <div class="learning-step"><span class="learning-step__number">1</span><h3 data-i18n="learn">Belajar</h3><p>Baca penerangan ringkas dan fokus kepada satu konsep.</p></div>
+        <div class="learning-step"><span class="learning-step__number">2</span><h3 data-i18n="try">Cuba</h3><p>Cuba sendiri sebelum melihat bantuan.</p></div>
+        <div class="learning-step"><span class="learning-step__number">3</span><h3 data-i18n="hint">Petunjuk</h3><p>Gunakan petunjuk apabila benar-benar diperlukan.</p></div>
+        <div class="learning-step"><span class="learning-step__number">4</span><h3 data-i18n="check">Semak</h3><p>Semak jawapan dan fahami penerangan.</p></div>
+        <div class="learning-step"><span class="learning-step__number">5</span><h3 data-i18n="tryAgain">Cuba Semula</h3><p>Cuba semula selepas memahami kesalahan.</p></div>
+        <div class="learning-step"><span class="learning-step__number">6</span><h3 data-i18n="moveForward">Maju</h3><p>Teruskan apabila konsep sudah lebih jelas.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--compact"><div class="container"><div class="notice notice--hint"><h2 data-i18n="mistakesHeading">Salah Bukan Bermaksud Gagal</h2><p>Di Learn2Step4ward, kesalahan digunakan untuk mengetahui apa yang perlu diperbaiki. Kenal pasti sama ada kesalahan melibatkan Fakta, Konsep atau Kecuaian, kemudian cuba semula.</p></div></div></section>
+
+  <section class="section"><div class="container grid grid--2"><div class="card"><h2 data-i18n="practice">Latihan</h2><p>Gunakan Quick Practice, Topic Practice, Mixed Practice atau Challenge.</p><a class="btn btn--primary" href="practice/index.html" data-i18n="practiceCta">Cuba Latihan</a></div><div class="card"><h2 data-i18n="resources">Resources</h2><p>Nota, worksheets, penerangan jawapan, revision packs dan quick reference.</p><a class="btn btn--secondary" href="resources/index.html" data-i18n="viewResources">Lihat Resources</a></div></div></section>
+
+  <section class="section--compact"><div class="container"><h2 class="center" data-i18n="forAdults">Untuk Orang Dewasa</h2><div class="grid grid--2"><div class="card"><h3 data-i18n="teachers">Teachers</h3><p>Bahan sokongan untuk pengajaran, pengukuhan, intervensi dan latihan kendiri.</p><a class="btn btn--secondary" href="teachers/index.html">Teacher Dashboard</a></div><div class="card"><h3 data-i18n="parents">Ibu Bapa</h3><p>Panduan membantu anak belajar tanpa terus memberikan jawapan.</p><a class="btn btn--secondary" href="parents/index.html">Parent Dashboard</a></div></div></div></section>
+</main>
+
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <strong>Learn2Step4ward</strong>
+    <div>Belajar untuk Maju Kedepan</div>
+    <div class="footer-subjects" data-i18n="footerSubjects">Bahasa Melayu • English • Matematik • Sains</div>
+    <div class="muted" data-i18n="footerEducation">Bahan pembelajaran adalah untuk tujuan pendidikan dan pembelajaran kendiri.</div>
+    <div>© Learn2Step4ward</div>
+  </div>
+</footer>
+<script src="assets/js/app.js" defer></script>
+<script src="assets/js/language.js" defer></script>
+
 </body>
 </html>

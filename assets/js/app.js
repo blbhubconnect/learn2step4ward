@@ -1,36 +1,36 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Mobile Menu Toggle
-  const menuToggle = document.getElementById("mobile-menu-toggle");
-  const navMenu = document.getElementById("nav-menu");
+(() => {
+  const menuButton = document.querySelector('[data-menu-toggle]');
+  const nav = document.querySelector('[data-site-nav]');
 
-  if (menuToggle && navMenu) {
-    menuToggle.addEventListener("click", () => {
-      navMenu.classList.toggle("open");
-      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-      menuToggle.setAttribute("aria-expanded", !isExpanded);
+  if (menuButton && nav) {
+    menuButton.addEventListener('click', () => {
+      const isOpen = nav.dataset.open === 'true';
+      nav.dataset.open = String(!isOpen);
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
     });
-  }
 
-  // Theme Toggle Logic
-  const themeToggleBtn = document.getElementById("theme-toggle");
-  const currentTheme = document.documentElement.getAttribute("data-theme") || "light";
-
-  if (themeToggleBtn) {
-    // Update button text based on initial theme
-    themeToggleBtn.innerHTML = currentTheme === "dark" ? "☀️ Terang" : "🌙 Gelap";
-
-    themeToggleBtn.addEventListener("click", () => {
-      let theme = document.documentElement.getAttribute("data-theme");
-      
-      if (theme === "dark") {
-        document.documentElement.removeAttribute("data-theme");
-        localStorage.setItem("l2s4w_theme", "light");
-        themeToggleBtn.innerHTML = "🌙 Gelap";
-      } else {
-        document.documentElement.setAttribute("data-theme", "dark");
-        localStorage.setItem("l2s4w_theme", "dark");
-        themeToggleBtn.innerHTML = "☀️ Terang";
+    nav.addEventListener('click', (event) => {
+      if (event.target.closest('a') && window.matchMedia('(max-width: 899px)').matches) {
+        nav.dataset.open = 'false';
+        menuButton.setAttribute('aria-expanded', 'false');
       }
     });
   }
-});
+
+  const themeButtons = document.querySelectorAll('[data-theme-choice]');
+
+  function setTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    themeButtons.forEach((button) => {
+      button.setAttribute('aria-pressed', String(button.dataset.themeChoice === theme));
+    });
+  }
+
+  // V1 foundation intentionally does not persist theme choice because persistence
+  // has not yet been approved as a project requirement.
+  setTheme(document.documentElement.dataset.theme || 'light');
+
+  themeButtons.forEach((button) => {
+    button.addEventListener('click', () => setTheme(button.dataset.themeChoice));
+  });
+})();
