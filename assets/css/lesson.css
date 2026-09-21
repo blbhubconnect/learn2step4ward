@@ -1,0 +1,293 @@
+
+/* =========================================
+   LESSON COMPONENTS (FASA 3 - KEMAS KINI UI LATIHAN)
+   ========================================= */
+.breadcrumb {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.breadcrumb a {
+  color: var(--primary);
+  text-decoration: none;
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.lesson-section {
+  background: var(--surface-color);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2rem;
+  border-left: 4px solid var(--border-color);
+  transition: background-color 0.3s;
+}
+
+/* Section specific accents */
+.lesson-section.objective { border-left-color: var(--primary); }
+.lesson-section.concept { border-left-color: var(--subj-sains); }
+.lesson-section.guided { border-left-color: var(--subj-eng); }
+.lesson-section.practice { border-left-color: var(--subj-math); }
+
+.section-label {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.learning-step {
+  background: var(--bg-color);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.learning-step-title {
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+/* =========================================
+   PRACTICE UI (REKAAN BAHARU - SOALAN)
+   ========================================= */
+.practice-card {
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  margin-top: 1rem;
+  background: var(--surface-color);
+}
+.question-text {
+  font-size: 1.4rem; 
+  font-weight: 600;
+  color: var(--text-heading);
+  margin-bottom: 2rem;
+  text-align: center; 
+  line-height: 1.4;
+}
+.options-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: stretch; 
+}
+.option-label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 1.25rem 1.5rem; 
+  border: 2px solid var(--border-color); 
+  border-radius: 12px; 
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background: var(--bg-color);
+}
+.option-label:hover {
+  border-color: var(--primary);
+  background: var(--surface-color);
+}
+.option-label input[type="radio"] {
+  transform: scale(1.3);
+}
+
+.hint-container {
+  text-align: left; 
+  margin-bottom: 1rem;
+}
+.btn-hint {
+  font-size: 0.75rem !important; 
+  padding: 0.4rem 0.8rem !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 6px;
+}
+.hint-icon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+.hint-box {
+  display: none; 
+  background: #FFFBEB;
+  border-left: 4px solid var(--warning);
+  padding: 1rem;
+  border-radius: 0 8px 8px 0;
+  margin: 0.5rem 0 2rem 0; 
+  color: #92400E;
+  text-align: left;
+  width: 100%;
+  font-size: 0.95rem;
+}
+[data-theme="dark"] .hint-box {
+  background: #252316;
+  color: #FDE68A;
+}
+
+.btn-check-answer {
+  width: 100%; 
+  padding: 1.25rem 1.5rem !important; 
+  border-radius: 12px !important; 
+  font-size: 1.15rem !important;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  display: block;
+}
+
+.feedback-box {
+  display: none;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+  text-align: left; 
+}
+.feedback-box.success {
+  background: #D1FAE5;
+  border: 1px solid #10B981;
+  color: #065F46;
+}
+.feedback-box.error {
+  background: #FEE2E2;
+  border: 1px solid #EF4444;
+  color: #991B1B;
+}
+[data-theme="dark"] .feedback-box.success {
+  background: #022C22;
+  color: #34D399;
+  border-color: #059669;
+}
+[data-theme="dark"] .feedback-box.error {
+  background: #450A0A;
+  color: #F87171;
+  border-color: #DC2626;
+}
+
+.error-classification {
+  display: none;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed var(--border-color);
+  text-align: left;
+}
+.error-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+@media (min-width: 640px) {
+  .error-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.error-btn {
+  background: var(--bg-color);
+  border: 2px solid var(--border-color);
+  color: var(--text-main);
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s;
+}
+.error-btn:hover, .error-btn.active {
+  border-color: var(--error);
+  background: var(--surface-color);
+}
+.error-btn strong {
+  display: block;
+  color: var(--error);
+  margin-bottom: 0.25rem;
+}
+.retry-section {
+  display: none;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+/* =========================================
+   ZON LATIHAN (PRACTICE HUB) - HALAMAN UTAMA
+   ========================================= */
+.practice-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+@media (min-width: 768px) {
+  .practice-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2x2 Layout Desktop */
+  }
+}
+
+.practice-hub-card {
+  background: var(--surface-color);
+  border-radius: 16px; 
+  padding: 3rem 2rem; /* Saiz kad dibesarkan */
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Susun ke tengah */
+  text-align: center; /* Alignment nama/teks ke tengah */
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+  border-top: 8px solid; /* Border tebal di atas */
+}
+.practice-hub-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgb(0 0 0 / 0.1);
+}
+
+/* Warna Tahap Cabaran */
+.practice-hub-card.level-1 { border-top-color: #10B981; } /* Hijau (Pantas) */
+.practice-hub-card.level-2 { border-top-color: #F59E0B; } /* Jingga (Topik) */
+.practice-hub-card.level-3 { border-top-color: #EF4444; } /* Merah (Campuran) */
+.practice-hub-card.level-4 { border-top-color: #8B5CF6; } /* Ungu (Cabaran) */
+
+/* Ruang Ikon */
+.practice-icon-wrap {
+  width: 90px;
+  height: 90px;
+  background-color: var(--bg-color);
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 3px solid var(--border-color);
+  font-size: 2.5rem; /* Untuk emoji placeholder */
+}
+.practice-icon-wrap img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.practice-hub-card h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  color: var(--text-heading);
+}
+.practice-hub-card p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  flex: 1; 
+}
+.practice-hub-card .btn {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 12px;
+  padding: 1rem;
+}

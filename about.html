@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn2Step4ward - Belajar untuk Maju Kedepan</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    if (localStorage.getItem('l2s4w_theme') === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
+</head>
+<body data-root="">
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo-link">L2S4W</a>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+      <nav class="nav-menu" id="nav-menu">
+        <button id="theme-toggle" class="theme-btn">🌙 Gelap</button>
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="bm">BM</button>
+          <button class="lang-btn" data-lang="en">ENG</button>
+        </div>
+        <a href="index.html" class="nav-link" data-i18n="navHome">Home</a>
+        <a href="start-here.html" class="nav-link" data-i18n="navStart">Mula Di Sini</a>
+        <a href="resources/index.html" class="nav-link" data-i18n="navResources">Resources</a>
+        <a href="practice/index.html" class="nav-link" data-i18n="navPractice">Latihan</a>
+        <a href="parents.html" class="nav-link" data-i18n="navParents">Ibu Bapa</a>
+        <a href="about.html" class="nav-link" data-i18n="navAbout">Tentang</a>
+      </nav>
+    </div>
+  </header>
+  <main class="main-content page-container">
+    <div class="info-section text-center">
+      <h1 class="mb-2" data-i18n="aboutTitle">Tentang Learn2Step4ward</h1>
+      <p class="mb-4" data-i18n="aboutDesc" style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 1.5rem auto;">Learn2Step4ward ialah projek pembelajaran terbuka untuk membantu murid belajar secara langkah demi langkah.</p>
+      
+      <h3 class="mb-2" data-i18n="aboutFocus">Fokus kepada:</h3>
+      <div class="about-focus-tags">
+        <span class="about-tag" data-i18n="f1">pemahaman asas</span>
+        <span class="about-tag" data-i18n="f2">pembelajaran visual</span>
+        <span class="about-tag" data-i18n="f3">latihan berpandu</span>
+        <span class="about-tag" data-i18n="f4">penyelesaian masalah</span>
+        <span class="about-tag" data-i18n="f5">refleksi kesalahan</span>
+        <span class="about-tag" data-i18n="f6">pembelajaran kendiri</span>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-title">Learn2Step4ward</div>
+    <p data-i18n="heroTagline">Belajar untuk Maju Kedepan</p>
+    <p data-i18n="footerSubjects">Bahasa Melayu &bull; English &bull; Matematik &bull; Sains</p>
+    <p data-i18n="footerNote">Bahan pembelajaran adalah untuk tujuan pendidikan dan pembelajaran kendiri.</p>
+    <p>&copy; Learn2Step4ward</p>
+  </footer>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/language.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn2Step4ward</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    if (localStorage.getItem('l2s4w_theme') === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
+</head>
+<body data-root="../">
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="../index.html" class="logo-link">L2S4W</a>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+      <nav class="nav-menu" id="nav-menu">
+        <button id="theme-toggle" class="theme-btn">🌙 Gelap</button>
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="bm">BM</button>
+          <button class="lang-btn" data-lang="en">ENG</button>
+        </div>
+        <a href="../index.html" class="nav-link" data-i18n="navHome">Home</a>
+        <a href="../start-here.html" class="nav-link" data-i18n="navStart">Mula Di Sini</a>
+        <a href="resources/index.html" class="nav-link" data-i18n="navResources">Resources</a>
+        <a href="practice/index.html" class="nav-link" data-i18n="navPractice">Latihan</a>
+        <a href="../parents.html" class="nav-link" data-i18n="navParents">Ibu Bapa</a>
+        <a href="../about.html" class="nav-link" data-i18n="navAbout">Tentang</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main class="main-content page-container text-center">
+    <div class="info-section">
+      <h1 class="mb-2" data-i18n="pracChallenge">Latihan Pantas</h1>
+      <p class="mb-4" data-i18n="pracQuickDesc">Latihan pendek (5-10 soalan) untuk menguji asas pantas.</p>
+      
+      <!-- Empty State -->
+      <div style="padding: 3rem; border: 2px dashed var(--border-color); border-radius: 12px; background: var(--bg-color);">
+        <h3 style="color: var(--text-muted);" data-i18n="comingSoon">Kandungan akan ditambah</h3>
+        <p style="margin-top: 1rem; font-size: 0.9rem;" class="text-muted">Bank soalan untuk Mod Latihan Pantas akan dimuat naik ke sini kelak.</p>
+      </div>
+      
+      <div class="mt-4" style="margin-top: 2rem;">
+        <a href="index.html" class="btn btn-outline">KEMBALI</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; Learn2Step4ward</p>
+  </footer>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/language.js"></script>
+</body>
+</html>

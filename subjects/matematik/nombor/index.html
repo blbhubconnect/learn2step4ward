@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nombor & Nilai Tempat - Learn2Step4ward</title>
+  <link rel="stylesheet" href="../../../assets/css/style.css">
+  <link rel="stylesheet" href="../../../assets/css/lesson.css">
+  <script>
+    if (localStorage.getItem('l2s4w_theme') === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
+</head>
+<body data-root="../../../">
+  
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="../../../index.html" class="logo-link">L2S4W</a>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+      <nav class="nav-menu" id="nav-menu">
+        <button id="theme-toggle" class="theme-btn">🌙 Gelap</button>
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="bm">BM</button>
+          <button class="lang-btn" data-lang="en">ENG</button>
+        </div>
+        <a href="../../../index.html" class="nav-link" data-i18n="navHome">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content page-container">
+    
+    <div class="breadcrumb">
+      <a href="../../../index.html" data-i18n="navHome">Home</a> > 
+      <a href="../index.html" data-i18n="subjTitleMath">Matematik</a> > 
+      <span>Nombor & Nilai Tempat</span>
+    </div>
+
+    <!-- A. APA KITA BELAJAR? -->
+    <section class="lesson-section objective">
+      <span class="section-label" data-i18n="lblObjective">A. Apa Kita Belajar?</span>
+      <h2 style="font-size: 1.5rem;">Menentukan Nilai Tempat dan Nilai Digit</h2>
+      <p class="mt-2 text-muted">Hari ini kita akan belajar membezakan antara kedudukan nombor (nilai tempat) dan nilai sebenar nombor tersebut (nilai digit).</p>
+    </section>
+
+    <!-- B. BELAJAR KONSEP -->
+    <section class="lesson-section concept">
+      <span class="section-label" data-i18n="lblConcept">B. Belajar Konsep</span>
+      <p class="mb-2 text-center">Dalam nombor <strong>34,512</strong>, setiap digit mempunyai 'rumah' atau nilai tempatnya sendiri.</p>
+      
+      <div style="overflow-x: auto; margin-top: 1.2rem;">
+        <table style="width: 100%; border-collapse: collapse; text-align: center; border: 1px solid var(--border-color);">
+          <tr style="background: var(--bg-color);">
+            <th style="padding: 10px; border: 1px solid var(--border-color);">Puluh Ribu</th>
+            <th style="padding: 10px; border: 1px solid var(--border-color);">Ribu</th>
+            <th style="padding: 10px; border: 1px solid var(--border-color);">Ratus</th>
+            <th style="padding: 10px; border: 1px solid var(--border-color);">Puluh</th>
+            <th style="padding: 10px; border: 1px solid var(--border-color);">Sa</th>
+          </tr>
+          <tr>
+            <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: bold; font-size: 1.2rem;">3</td>
+            <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: bold; font-size: 1.2rem;">4</td>
+            <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: bold; font-size: 1.2rem;">5</td>
+            <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: bold; font-size: 1.2rem;">1</td>
+            <td style="padding: 10px; border: 1px solid var(--border-color); font-weight: bold; font-size: 1.2rem;">2</td>
+          </tr>
+        </table>
+      </div>
+      <p class="mt-2 text-muted" style="font-size: 1rem;">Nota: <em>Nilai Tempat</em> ditulis dalam perkataan. <em>Nilai Digit</em> ditulis dalam nombor (contoh: 500).</p>
+    </section>
+
+    <!-- C. CONTOH BERPANDU -->
+    <section class="lesson-section guided">
+      <span class="section-label" data-i18n="lblGuided">C. Contoh Berpandu</span>
+      <p class="mb-3 text-center"><strong>Soalan:</strong> Nyatakan nilai tempat bagi digit 4 dalam nombor 74,310.</p>
+      
+      <div class="learning-step">
+        <div class="learning-step-title">Langkah 1: Apa yang diketahui?</div>
+        <p>Nombor keseluruhan ialah 74,310. Kita perlu fokus kepada digit 4.</p>
+      </div>
+      <div class="learning-step">
+        <div class="learning-step-title">Langkah 2: Apa yang perlu dicari?</div>
+        <p>Soalan bertanyakan "nilai tempat", bermaksud jawapan mesti dalam bentuk perkataan.</p>
+      </div>
+      <div class="learning-step">
+        <div class="learning-step-title">Langkah 3: Selesaikan</div>
+        <p>Gunakan jadual rumah nombor dari kanan: Sa(0) -> Puluh(1) -> Ratus(3) -> <strong>Ribu(4)</strong>.<br>Jawapan: <strong>Ribu</strong></p>
+      </div>
+    </section>
+
+    <!-- D. CUBA SENDIRI (Interactive) -->
+    <section class="lesson-section practice">
+      <span class="section-label" data-i18n="lblTry">D. Cuba Sendiri - Tahap 1 (Asas)</span>
+      
+      <div class="practice-card">
+        
+        <!-- AYAT SOALAN -->
+        <p class="question-text">Apakah nilai tempat bagi digit 8 dalam nombor 18,293?</p>
+        
+        <!-- PILIHAN JAWAPAN (Shape Card Lebar Penuh) -->
+        <div class="options-group">
+          <label class="option-label">
+            <input type="radio" name="practice_q1" value="A"> <span>A) 8,000</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="practice_q1" value="B"> <span>B) Ribu</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="practice_q1" value="C"> <span>C) Ratus</span>
+          </label>
+        </div>
+
+        <!-- E. PERLUKAN PETUNJUK? (Alignment Kiri, Saiz Kecil) -->
+        <div class="hint-container">
+          <button id="btn-show-hint" class="btn btn-outline btn-hint mb-2">
+            <!-- RUANG IKON: Letakkan src imej ikon anda di sini -->
+            <!-- <img src="../../../assets/images/icon-hint.png" alt="Petunjuk" class="hint-icon"> -->
+            <span data-i18n="btnHint">Tunjukkan Petunjuk</span>
+          </button>
+        </div>
+        
+        <div id="hint-box" class="hint-box">
+          <strong>Petunjuk:</strong> "Nilai tempat" dieja menggunakan perkataan (seperti Sa, Puluh). Jika jawapan dalam nombor, itu adalah "Nilai digit".
+        </div>
+
+        <!-- F. SEMAK JAWAPAN (Shape & Saiz Lebar Penuh) -->
+        <button id="btn-check-answer" class="btn btn-primary btn-check-answer" data-i18n="btnCheck">Semak Jawapan</button>
+
+        <!-- Feedback Container -->
+        <div id="feedback-box" class="feedback-box mt-3"></div>
+
+        <!-- G. KENAPA SAYA SALAH? (Error Classification) -->
+        <div id="error-classification" class="error-classification">
+          <h4 data-i18n="lblWhyWrong">Kenapa Saya Salah?</h4>
+          <p class="text-muted" style="font-size: 0.9rem;" data-i18n="lblWhyWrongDesc">Pilih satu yang paling tepat untuk Jurnal Ralat kamu.</p>
+          
+          <div class="error-grid">
+            <button class="error-btn" data-error-type="fakta">
+              <strong data-i18n="errFaktaTitle">[FAKTA]</strong> 
+              <span data-i18n="errFaktaDesc">Saya belum ingat turutan rumah nombor.</span>
+            </button>
+            <button class="error-btn" data-error-type="konsep">
+              <strong data-i18n="errKonsepTitle">[KONSEP]</strong> 
+              <span data-i18n="errKonsepDesc">Saya keliru beza Nilai Tempat & Nilai Digit.</span>
+            </button>
+            <button class="error-btn" data-error-type="kecuaian">
+              <strong data-i18n="errKecuaianTitle">[KECUAIAN]</strong> 
+              <span data-i18n="errKecuaianDesc">Saya tahu, tapi saya tersalah baca soalan.</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- H. CUBA SEKALI LAGI -->
+        <div id="retry-section" class="retry-section">
+          <button class="btn btn-outline" data-i18n="btnRetry">Cuba Soalan Serupa</button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; Learn2Step4ward</p>
+  </footer>
+  <script src="../../../assets/js/app.js"></script>
+  <script src="../../../assets/js/language.js"></script>
+  <script src="../../../assets/js/lesson.js"></script>
+</body>
+</html>

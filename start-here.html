@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn2Step4ward - Belajar untuk Maju Kedepan</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    if (localStorage.getItem('l2s4w_theme') === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
+</head>
+<body data-root="">
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo-link">L2S4W</a>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+      <nav class="nav-menu" id="nav-menu">
+        <button id="theme-toggle" class="theme-btn">🌙 Gelap</button>
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="bm">BM</button>
+          <button class="lang-btn" data-lang="en">ENG</button>
+        </div>
+        <a href="index.html" class="nav-link" data-i18n="navHome">Home</a>
+        <a href="start-here.html" class="nav-link" data-i18n="navStart">Mula Di Sini</a>
+        <a href="resources/index.html" class="nav-link" data-i18n="navResources">Resources</a>
+        <a href="practice/index.html" class="nav-link" data-i18n="navPractice">Latihan</a>
+        <a href="parents.html" class="nav-link" data-i18n="navParents">Ibu Bapa</a>
+        <a href="about.html" class="nav-link" data-i18n="navAbout">Tentang</a>
+      </nav>
+    </div>
+  </header>
+  <main class="main-content page-container">
+    <div class="info-section">
+      <h1 class="mb-2" data-i18n="startTitle">Cara Belajar di Learn2Step4ward</h1>
+      <p class="mb-4" data-i18n="startDesc">Tidak perlu habiskan semuanya dalam satu masa. Ikut 5 langkah mudah ini:</p>
+      
+      <div class="step-item">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3 data-i18n="step1">① BELAJAR</h3>
+          <p data-i18n="step1desc">Baca nota ringkas dan lihat contoh yang diberikan. Fokus kepada satu konsep pada satu masa.</p>
+        </div>
+      </div>
+      
+      <div class="step-item">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3 data-i18n="step2">② CUBA</h3>
+          <p data-i18n="step2desc">Jawab latihan tanpa melihat jawapan terlebih dahulu. Tidak mengapa jika tersalah.</p>
+        </div>
+      </div>
+      
+      <div class="step-item">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3 data-i18n="step3">③ GUNA PETUNJUK</h3>
+          <p data-i18n="step3desc">Jika tidak pasti, gunakan soalan membimbing atau petunjuk yang disediakan. Contoh: <em>“Apakah keyword yang kamu nampak?”</em></p>
+        </div>
+      </div>
+      
+      <div class="step-item">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h3 data-i18n="step4">④ SEMAK</h3>
+          <p data-i18n="step4desc">Semak jawapan dan baca penerangan. Jangan hanya lihat sama ada jawapan betul atau salah. Fahami mengapa jawapan itu betul.</p>
+        </div>
+      </div>
+      
+      <div class="step-item">
+        <div class="step-number">5</div>
+        <div class="step-content">
+          <h3 data-i18n="step5">⑤ BAIKI</h3>
+          <p data-i18n="step5desc">Jika tersalah, kenal pasti jenis kesalahan: <strong>Fakta</strong>, <strong>Konsep</strong>, atau <strong>Kecuaian</strong>. Kemudian cuba semula.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-title">Learn2Step4ward</div>
+    <p data-i18n="heroTagline">Belajar untuk Maju Kedepan</p>
+    <p data-i18n="footerSubjects">Bahasa Melayu &bull; English &bull; Matematik &bull; Sains</p>
+    <p data-i18n="footerNote">Bahan pembelajaran adalah untuk tujuan pendidikan dan pembelajaran kendiri.</p>
+    <p>&copy; Learn2Step4ward</p>
+  </footer>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/language.js"></script>
+</body>
+</html>

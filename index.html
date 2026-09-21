@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn2Step4ward - Belajar untuk Maju Kedepan</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    if (localStorage.getItem('l2s4w_theme') === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
+</head>
+<body data-root="">
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo-link">L2S4W</a>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+      <nav class="nav-menu" id="nav-menu">
+        <button id="theme-toggle" class="theme-btn">🌙 Gelap</button>
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="bm">BM</button>
+          <button class="lang-btn" data-lang="en">ENG</button>
+        </div>
+        <a href="index.html" class="nav-link" data-i18n="navHome">Home</a>
+        <a href="start-here.html" class="nav-link" data-i18n="navStart">Mula Di Sini</a>
+        <a href="practice/index.html" class="nav-link" data-i18n="navPractice">Latihan</a>
+        <a href="resources/index.html" class="nav-link" data-i18n="navResources">Resources</a>
+        <a href="parents.html" class="nav-link" data-i18n="navParents">Ibu Bapa</a>
+        <a href="about.html" class="nav-link" data-i18n="navAbout">Tentang</a>
+      </nav>
+    </div>
+  </header>
+  <main class="main-content">
+    
+    <section class="hero">
+      <h1 class="hero-title" data-i18n="heroTitle">Learn2Step4ward</h1>
+      <p class="hero-tagline" data-i18n="heroTagline">Belajar untuk Maju Kedepan</p>
+      <p class="hero-desc" data-i18n="heroDesc">Bahan pembelajaran kendiri untuk membantu murid Tahun 4 memahami asas, mencuba latihan dan memperbaiki kesalahan langkah demi langkah.</p>
+      <div class="hero-actions">
+        <a href="start-here.html" class="btn btn-primary" data-i18n="startBtn">Mula Belajar</a>
+        <a href="#subjects" class="btn btn-outline" data-i18n="subjectBtn">Pilih Subjek</a>
+      </div>
+    </section>
+
+    <section id="subjects" class="subject-grid">
+      <!-- BM -->
+      <div class="subject-card bm">
+        <div class="subject-icon-wrap">
+          <!-- <img src="assets/images/icon-bm.png" alt="Ikon BM"> -->
+          Ikon BM
+        </div>
+        <h2 class="subject-title" data-i18n="subjTitleBM">Bahasa Melayu</h2>
+        <p class="subject-tagline" data-i18n="subjTagBM">Fahami bahasa. Susun idea. Bina ayat dengan yakin.</p>
+        <ul class="subject-topics">
+          <li>Sistem Bahasa</li>
+          <li>Kosa Kata</li>
+          <li>Teknik SKOP</li>
+          <li>Kefahaman</li>
+          <li>Pemetaan Idea</li>
+          <li>Penulisan</li>
+        </ul>
+        <a href="subjects/bahasa-melayu/index.html" class="btn btn-outline" data-i18n="subjBtnBM">Belajar Bahasa Melayu</a>
+      </div>
+      
+      <!-- English -->
+      <div class="subject-card eng">
+        <div class="subject-icon-wrap">
+          <!-- <img src="assets/images/icon-eng.png" alt="Ikon English"> -->
+          Ikon ENG
+        </div>
+        <h2 class="subject-title" data-i18n="subjTitleEng">English</h2>
+        <p class="subject-tagline" data-i18n="subjTagEng">Read the clues. Understand the sentence. Build your answer.</p>
+        <ul class="subject-topics">
+          <li>Vocabulary</li>
+          <li>Grammar</li>
+          <li>Keyword Decoding</li>
+          <li>Reading Comprehension</li>
+          <li>Sentence Framing</li>
+          <li>Guided Writing</li>
+        </ul>
+        <a href="subjects/english/index.html" class="btn btn-outline" data-i18n="subjBtnEng">Learn English</a>
+      </div>
+      
+      <!-- Math -->
+      <div class="subject-card math">
+        <div class="subject-icon-wrap">
+          <!-- <img src="assets/images/icon-math.png" alt="Ikon Matematik"> -->
+          Ikon Math
+        </div>
+        <h2 class="subject-title" data-i18n="subjTitleMath">Matematik</h2>
+        <p class="subject-tagline" data-i18n="subjTagMath">Lihat. Faham. Modelkan. Kira.</p>
+        <ul class="subject-topics">
+          <li>Nombor & Nilai Tempat</li>
+          <li>Operasi (Tambah, Tolak, Darab, Bahagi)</li>
+          <li>Pecahan & Perpuluhan</li>
+          <li>Wang & Masa</li>
+          <li>Ukuran & Data</li>
+          <li>Bar Modeling & KBAT</li>
+        </ul>
+        <a href="subjects/matematik/index.html" class="btn btn-outline" data-i18n="subjBtnMath">Belajar Matematik</a>
+      </div>
+      
+      <!-- Sains -->
+      <div class="subject-card sains">
+        <div class="subject-icon-wrap">
+          <!-- <img src="assets/images/icon-sains.png" alt="Ikon Sains"> -->
+          Ikon Sains
+        </div>
+        <h2 class="subject-title" data-i18n="subjTitleSains">Sains</h2>
+        <p class="subject-tagline" data-i18n="subjTagSains">Perhati. Fikir. Cari bukti. Terangkan.</p>
+        <ul class="subject-topics">
+          <li>Konsep Asas Sains</li>
+          <li>Kemahiran Proses Sains (KPS)</li>
+          <li>Eksperimen</li>
+          <li>Claim-Evidence-Reasoning (CER)</li>
+          <li>Soalan Penaakulan</li>
+        </ul>
+        <a href="subjects/sains/index.html" class="btn btn-outline" data-i18n="subjBtnSains">Belajar Sains</a>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="footer-title">Learn2Step4ward</div>
+    <p data-i18n="heroTagline">Belajar untuk Maju Kedepan</p>
+    <p data-i18n="footerSubjects">Bahasa Melayu &bull; English &bull; Matematik &bull; Sains</p>
+    <p data-i18n="footerNote">Bahan pembelajaran adalah untuk tujuan pendidikan dan pembelajaran kendiri.</p>
+    <p>&copy; Learn2Step4ward</p>
+  </footer>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/language.js"></script>
+</body>
+</html>

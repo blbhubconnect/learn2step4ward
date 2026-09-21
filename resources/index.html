@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn2Step4ward</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    if (localStorage.getItem('l2s4w_theme') === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
+</head>
+<body data-root="../">
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="../index.html" class="logo-link">L2S4W</a>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+      <nav class="nav-menu" id="nav-menu">
+        <button id="theme-toggle" class="theme-btn">🌙 Gelap</button>
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="bm">BM</button>
+          <button class="lang-btn" data-lang="en">ENG</button>
+        </div>
+        <a href="../index.html" class="nav-link" data-i18n="navHome">Home</a>
+        <a href="../start-here.html" class="nav-link" data-i18n="navStart">Mula Di Sini</a>
+        <a href="resources/index.html" class="nav-link" data-i18n="navResources">Resources</a>
+        <a href="practice/index.html" class="nav-link" data-i18n="navPractice">Latihan</a>
+        <a href="../parents.html" class="nav-link" data-i18n="navParents">Ibu Bapa</a>
+        <a href="../about.html" class="nav-link" data-i18n="navAbout">Tentang</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main class="main-content">
+    <div class="hero" style="border-top: 6px solid var(--warning);">
+      <h1 class="hero-title" data-i18n="resTitle">Hab Sumber (Resources)</h1>
+      <p class="hero-tagline" data-i18n="resDesc">Bahan rujukan, nota visual, dan latihan boleh cetak untuk ulang kaji.</p>
+    </div>
+
+    <!-- Category Filter (Visual MVP) -->
+    <div class="about-focus-tags mb-4">
+      <span class="about-tag" data-i18n="resNotes">Nota Ringkas</span>
+      <span class="about-tag" data-i18n="resWorksheets">Latihan Cetak</span>
+      <span class="about-tag" data-i18n="resAnswers">Jawapan</span>
+      <span class="about-tag" data-i18n="resQuickRef">Rujukan Pantas</span>
+    </div>
+
+    <div class="subject-grid">
+      
+      <!-- Resource Card 1 (Active Example) -->
+      <div class="subject-card">
+        <span style="font-size: 0.75rem; font-weight: bold; color: var(--subj-math); text-transform: uppercase; margin-bottom: 0.5rem;">Matematik</span>
+        <h3 class="mb-1">Jadual Nilai Tempat & Digit</h3>
+        <p class="text-muted mb-3" style="font-size: 0.9rem;" data-i18n="resQuickRef">Rujukan Pantas (Formula)</p>
+        <div style="flex: 1;"></div>
+        <button class="btn btn-primary" style="width: 100%; opacity: 0.5; cursor: not-allowed;" data-i18n="btnComingSoon">Akan Ditambah</button>
+      </div>
+
+      <!-- Resource Card 2 (Empty State) -->
+      <div class="subject-card">
+        <span style="font-size: 0.75rem; font-weight: bold; color: var(--subj-bm); text-transform: uppercase; margin-bottom: 0.5rem;">Bahasa Melayu</span>
+        <h3 class="mb-1">Teknik Bina Ayat SKOP</h3>
+        <p class="text-muted mb-3" style="font-size: 0.9rem;" data-i18n="resNotes">Nota Ringkas</p>
+        <div style="flex: 1;"></div>
+        <button class="btn btn-outline" style="width: 100%; opacity: 0.5; cursor: not-allowed;" data-i18n="btnComingSoon">Akan Ditambah</button>
+      </div>
+      
+      <!-- Resource Card 3 (Empty State) -->
+      <div class="subject-card">
+        <span style="font-size: 0.75rem; font-weight: bold; color: var(--subj-eng); text-transform: uppercase; margin-bottom: 0.5rem;">English</span>
+        <h3 class="mb-1">Grammar Cheatsheet: Tenses</h3>
+        <p class="text-muted mb-3" style="font-size: 0.9rem;" data-i18n="resQuickRef">Rujukan Pantas</p>
+        <div style="flex: 1;"></div>
+        <button class="btn btn-outline" style="width: 100%; opacity: 0.5; cursor: not-allowed;" data-i18n="btnComingSoon">Akan Ditambah</button>
+      </div>
+
+      <!-- Resource Card 4 (Empty State) -->
+      <div class="subject-card">
+        <span style="font-size: 0.75rem; font-weight: bold; color: var(--subj-sains); text-transform: uppercase; margin-bottom: 0.5rem;">Sains</span>
+        <h3 class="mb-1">Latihan Pemerhatian (KPS)</h3>
+        <p class="text-muted mb-3" style="font-size: 0.9rem;" data-i18n="resWorksheets">Latihan Cetak (Worksheets)</p>
+        <div style="flex: 1;"></div>
+        <button class="btn btn-outline" style="width: 100%; opacity: 0.5; cursor: not-allowed;" data-i18n="btnComingSoon">Akan Ditambah</button>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; Learn2Step4ward</p>
+  </footer>
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/language.js"></script>
+</body>
+</html>
