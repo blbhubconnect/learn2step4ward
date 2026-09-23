@@ -70,5 +70,11 @@
   "progressCheck": "Progress Check",
   "aboutTitle": "About Learn2Step4ward",
   "footerEducation": "Learning materials are provided for education and self-directed learning.",
-  "footerSubjects": "Bahasa Melayu • English • Mathematics • Science"
+  "footerSubjects": "Bahasa Melayu • English • Mathematics • Science",
+  "homeExplore": "Explore & Learn",
+  "homeChooseActivity": "What would you like to do now?",
+  "homeStartIntro": "Follow simple steps and learn one thing at a time.",
+  "homeQuickAccess": "Quick Access",
+  "homeQuickAccessIntro": "Go straight to practice, resources, or choose a subject to learn.",
+  "homeSubjectsIntro": "Four learning spaces. Choose one and begin with a suitable topic."
 }

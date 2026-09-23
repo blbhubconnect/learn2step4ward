@@ -15,18 +15,39 @@
     <div class="site-header__top">
       <a class="brand" href="index.html">Learn2Step4ward</a>
       <div class="header-actions">
-        <div class="lang-switch" aria-label="Language">
-          <button type="button" data-language="bm" aria-pressed="true">BM</button>
-          <button type="button" data-language="en" aria-pressed="false">ENG</button>
+        <div class="desktop-utility-actions" aria-label="Site preferences">
+          <div class="lang-switch" aria-label="Language">
+            <button type="button" data-language="bm" aria-pressed="true">BM</button>
+            <button type="button" data-language="en" aria-pressed="false">ENG</button>
+          </div>
+          <div class="theme-switch" aria-label="Display theme">
+            <button type="button" data-theme-choice="light" aria-pressed="true"><span aria-hidden="true">☀️</span> <span data-i18n="light">Cerah</span></button>
+            <button type="button" data-theme-choice="dark" aria-pressed="false"><span aria-hidden="true">🌙</span> <span data-i18n="dark">Gelap</span></button>
+          </div>
         </div>
-        <div class="theme-switch" aria-label="Display theme">
-          <button type="button" data-theme-choice="light" aria-pressed="true"><span aria-hidden="true">☀️</span> <span data-i18n="light">Cerah</span></button>
-          <button type="button" data-theme-choice="dark" aria-pressed="false"><span aria-hidden="true">🌙</span> <span data-i18n="dark">Gelap</span></button>
-        </div>
-        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav"><span aria-hidden="true">☰</span><span class="sr-only" data-i18n="menu">Menu</span></button>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+          <span class="menu-toggle__icon" data-menu-icon aria-hidden="true">☰</span>
+          <span class="sr-only" data-i18n="menu">Menu</span>
+        </button>
       </div>
     </div>
     <nav class="site-nav" id="site-nav" data-site-nav data-open="false" aria-label="Main navigation">
+      <div class="mobile-nav-utilities">
+        <div class="mobile-nav-utility">
+          <span class="mobile-nav-utility__label">Bahasa / Language</span>
+          <div class="lang-switch" aria-label="Language">
+            <button type="button" data-language="bm" aria-pressed="true">BM</button>
+            <button type="button" data-language="en" aria-pressed="false">ENG</button>
+          </div>
+        </div>
+        <div class="mobile-nav-utility">
+          <span class="mobile-nav-utility__label">Paparan / Display</span>
+          <div class="theme-switch" aria-label="Display theme">
+            <button type="button" data-theme-choice="light" aria-pressed="true"><span aria-hidden="true">☀️</span> <span data-i18n="light">Cerah</span></button>
+            <button type="button" data-theme-choice="dark" aria-pressed="false"><span aria-hidden="true">🌙</span> <span data-i18n="dark">Gelap</span></button>
+          </div>
+        </div>
+      </div>
       <div class="nav-shell">
         <div class="nav-group">
           <div class="nav-group__label">Mula</div>

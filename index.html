@@ -7,7 +7,7 @@
   <title>Home | Learn2Step4ward</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body class="home-page">
 
 <a class="skip-link" href="#main" data-i18n="skipContent">Langkau ke kandungan utama</a>
 <header class="site-header">
@@ -15,18 +15,39 @@
     <div class="site-header__top">
       <a class="brand" href="index.html">Learn2Step4ward</a>
       <div class="header-actions">
-        <div class="lang-switch" aria-label="Language">
-          <button type="button" data-language="bm" aria-pressed="true">BM</button>
-          <button type="button" data-language="en" aria-pressed="false">ENG</button>
+        <div class="desktop-utility-actions" aria-label="Site preferences">
+          <div class="lang-switch" aria-label="Language">
+            <button type="button" data-language="bm" aria-pressed="true">BM</button>
+            <button type="button" data-language="en" aria-pressed="false">ENG</button>
+          </div>
+          <div class="theme-switch" aria-label="Display theme">
+            <button type="button" data-theme-choice="light" aria-pressed="true"><span aria-hidden="true">☀️</span> <span data-i18n="light">Cerah</span></button>
+            <button type="button" data-theme-choice="dark" aria-pressed="false"><span aria-hidden="true">🌙</span> <span data-i18n="dark">Gelap</span></button>
+          </div>
         </div>
-        <div class="theme-switch" aria-label="Display theme">
-          <button type="button" data-theme-choice="light" aria-pressed="true"><span aria-hidden="true">☀️</span> <span data-i18n="light">Cerah</span></button>
-          <button type="button" data-theme-choice="dark" aria-pressed="false"><span aria-hidden="true">🌙</span> <span data-i18n="dark">Gelap</span></button>
-        </div>
-        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav"><span aria-hidden="true">☰</span><span class="sr-only" data-i18n="menu">Menu</span></button>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+          <span class="menu-toggle__icon" data-menu-icon aria-hidden="true">☰</span>
+          <span class="sr-only" data-i18n="menu">Menu</span>
+        </button>
       </div>
     </div>
     <nav class="site-nav" id="site-nav" data-site-nav data-open="false" aria-label="Main navigation">
+      <div class="mobile-nav-utilities">
+        <div class="mobile-nav-utility">
+          <span class="mobile-nav-utility__label">Bahasa / Language</span>
+          <div class="lang-switch" aria-label="Language">
+            <button type="button" data-language="bm" aria-pressed="true">BM</button>
+            <button type="button" data-language="en" aria-pressed="false">ENG</button>
+          </div>
+        </div>
+        <div class="mobile-nav-utility">
+          <span class="mobile-nav-utility__label">Paparan / Display</span>
+          <div class="theme-switch" aria-label="Display theme">
+            <button type="button" data-theme-choice="light" aria-pressed="true"><span aria-hidden="true">☀️</span> <span data-i18n="light">Cerah</span></button>
+            <button type="button" data-theme-choice="dark" aria-pressed="false"><span aria-hidden="true">🌙</span> <span data-i18n="dark">Gelap</span></button>
+          </div>
+        </div>
+      </div>
       <div class="nav-shell">
         <div class="nav-group">
           <div class="nav-group__label">Mula</div>
@@ -64,58 +85,151 @@
   </div>
 </header>
 
+<main id="main" class="home-main">
+  <section class="home-portal" aria-labelledby="home-title">
+    <div class="home-portal__sky">
+      <div class="container home-portal__container">
+        <nav class="home-subject-tabs" aria-label="Subject shortcuts">
+          <a class="home-subject-tab home-subject-tab--bm" href="subjects/bahasa-melayu/index.html">
+            <span class="home-subject-tab__icon" aria-hidden="true">📝</span>
+            <span data-i18n="bahasaMelayu">Bahasa Melayu</span>
+          </a>
+          <a class="home-subject-tab home-subject-tab--english" href="subjects/english/index.html">
+            <span class="home-subject-tab__icon" aria-hidden="true">🔤</span>
+            <span data-i18n="english">English</span>
+          </a>
+          <a class="home-subject-tab home-subject-tab--math" href="subjects/matematik/index.html">
+            <span class="home-subject-tab__icon" aria-hidden="true">➗</span>
+            <span data-i18n="mathematics">Matematik</span>
+          </a>
+          <a class="home-subject-tab home-subject-tab--science" href="subjects/sains/index.html">
+            <span class="home-subject-tab__icon" aria-hidden="true">🔬</span>
+            <span data-i18n="science">Sains</span>
+          </a>
+        </nav>
 
-<main id="main">
-  <section class="hero">
-    <div class="container">
-      <div class="hero__panel">
-        <div class="hero__identity">
-          <div class="eyebrow">Learning Hub untuk Murid Tahun 4</div>
-          <h1 class="hero__title">Learn2Step4ward</h1>
-          <p class="hero__tagline"><strong>Belajar untuk Maju Kedepan</strong></p>
+        <div class="home-scene">
+          <span class="home-scene__spark home-scene__spark--one" aria-hidden="true">✦</span>
+          <span class="home-scene__spark home-scene__spark--two" aria-hidden="true">✦</span>
+          <span class="home-scene__cloud home-scene__cloud--one" aria-hidden="true"></span>
+          <span class="home-scene__cloud home-scene__cloud--two" aria-hidden="true"></span>
+          <span class="home-scene__sun" aria-hidden="true">☀️</span>
+          <div class="home-scene__hill home-scene__hill--back" aria-hidden="true"></div>
+          <div class="home-scene__hill home-scene__hill--front" aria-hidden="true"></div>
+
+          <div class="home-hero">
+            <div class="home-hero__identity">
+              <div class="home-hero__eyebrow">Learning Hub untuk Murid Tahun 4</div>
+              <h1 id="home-title" class="home-hero__title">Learn2Step4ward</h1>
+              <p class="home-hero__tagline"><strong>Belajar untuk Maju Kedepan</strong></p>
+            </div>
+            <p class="home-hero__description">Bahan pembelajaran kendiri untuk membantu murid Tahun 4 memahami asas, mencuba latihan dan memperbaiki kesalahan langkah demi langkah.</p>
+            <div class="home-hero__actions">
+              <a class="btn home-btn home-btn--start" href="start-here.html" data-i18n="startLearning">Mula Belajar</a>
+              <a class="btn home-btn home-btn--subjects" href="subjects/index.html" data-i18n="chooseSubject">Pilih Subjek</a>
+            </div>
+          </div>
         </div>
-        <p class="hero__description">Bahan pembelajaran kendiri untuk membantu murid Tahun 4 memahami asas, mencuba latihan dan memperbaiki kesalahan langkah demi langkah.</p>
-        <div class="hero__actions">
-          <a class="btn btn--primary" href="start-here.html" data-i18n="startLearning">Mula Belajar</a>
-          <a class="btn btn--secondary" href="subjects/index.html" data-i18n="chooseSubject">Pilih Subjek</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-activity-section" aria-labelledby="home-activity-title">
+    <div class="container">
+      <div class="home-section-heading">
+        <span class="home-section-heading__kicker" data-i18n="homeExplore">Teroka & Belajar</span>
+        <h2 id="home-activity-title" data-i18n="homeChooseActivity">Apa yang mahu dibuat sekarang?</h2>
+      </div>
+
+      <div class="home-activity-grid">
+        <article class="home-board home-board--learn">
+          <div class="home-board__header">
+            <span class="home-board__face" aria-hidden="true">🙂</span>
+            <h3 data-i18n="startLearning">Mula Belajar</h3>
+          </div>
+          <p data-i18n="homeStartIntro">Ikut langkah mudah dan belajar satu perkara pada satu masa.</p>
+          <div class="home-mini-flow" aria-label="Learning flow">
+            <span data-i18n="learn">Belajar</span>
+            <span data-i18n="try">Cuba</span>
+            <span data-i18n="hint">Petunjuk</span>
+            <span data-i18n="check">Semak</span>
+            <span data-i18n="tryAgain">Cuba Semula</span>
+            <span data-i18n="moveForward">Maju</span>
+          </div>
+          <a class="home-board__link" href="start-here.html"><span data-i18n="startHere">Mula Di Sini</span> <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="home-board home-board--next">
+          <div class="home-board__header">
+            <span class="home-board__face" aria-hidden="true">⭐</span>
+            <h3 data-i18n="homeQuickAccess">Pilihan Pantas</h3>
+          </div>
+          <p data-i18n="homeQuickAccessIntro">Terus ke latihan, resources atau pilih subjek yang mahu dipelajari.</p>
+          <div class="home-choice-list">
+            <a href="practice/index.html"><span aria-hidden="true">🎯</span><span data-i18n="practice">Latihan</span><span aria-hidden="true">›</span></a>
+            <a href="resources/index.html"><span aria-hidden="true">📚</span><span data-i18n="resources">Resources</span><span aria-hidden="true">›</span></a>
+            <a href="subjects/index.html"><span aria-hidden="true">🧭</span><span data-i18n="chooseSubject">Pilih Subjek</span><span aria-hidden="true">›</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-subject-section" aria-labelledby="subjects-heading">
+    <div class="container">
+      <div class="home-section-heading home-section-heading--subjects">
+        <span class="home-section-heading__kicker" data-i18n="subjects">Subjek</span>
+        <h2 id="subjects-heading" data-i18n="chooseSubject">Pilih Subjek</h2>
+        <p data-i18n="homeSubjectsIntro">Empat ruang pembelajaran. Pilih satu dan mula dengan topik yang sesuai.</p>
+      </div>
+
+      <div class="home-subject-grid">
+        <article class="home-subject-card home-subject-card--bm">
+          <div class="home-subject-card__icon" role="img" aria-label="Bahasa Melayu">📝</div>
+          <p class="home-subject-card__description">Bina ayat. Fahami petikan.</p>
+          <a href="subjects/bahasa-melayu/index.html" data-i18n="learnBM">Belajar Bahasa Melayu</a>
+        </article>
+        <article class="home-subject-card home-subject-card--english">
+          <div class="home-subject-card__icon" role="img" aria-label="English">🔤</div>
+          <p class="home-subject-card__description">Read, understand and respond.</p>
+          <a href="subjects/english/index.html" data-i18n="learnEnglish">Learn English</a>
+        </article>
+        <article class="home-subject-card home-subject-card--math">
+          <div class="home-subject-card__icon" role="img" aria-label="Matematik">➗</div>
+          <p class="home-subject-card__description">Faham konsep. Selesaikan langkah.</p>
+          <a href="subjects/matematik/index.html" data-i18n="learnMath">Belajar Matematik</a>
+        </article>
+        <article class="home-subject-card home-subject-card--science">
+          <div class="home-subject-card__icon" role="img" aria-label="Sains">🔬</div>
+          <p class="home-subject-card__description">Perhati, fikir dan terangkan.</p>
+          <a href="subjects/sains/index.html" data-i18n="learnScience">Belajar Sains</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-support-section">
+    <div class="container home-support-grid">
+      <article class="home-support-card home-support-card--mistakes">
+        <span class="home-support-card__icon" aria-hidden="true">💡</span>
+        <div>
+          <h2 data-i18n="mistakesHeading">Salah Bukan Bermaksud Gagal</h2>
+          <p>Kesalahan membantu kita tahu apa yang perlu disemak. Kenal pasti Fakta, Konsep atau Kecuaian, kemudian cuba semula.</p>
         </div>
-      </div>
+      </article>
+      <article class="home-support-card home-support-card--adults">
+        <span class="home-support-card__icon" aria-hidden="true">🤝</span>
+        <div>
+          <h2 data-i18n="forAdults">Untuk Orang Dewasa</h2>
+          <div class="home-support-links">
+            <a href="teachers/index.html"><span data-i18n="teachers">Teachers</span> <span aria-hidden="true">→</span></a>
+            <a href="parents/index.html"><span data-i18n="parents">Ibu Bapa</span> <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
-
-  <section class="section" aria-labelledby="subjects-heading">
-    <div class="container">
-      <div class="center"><div class="eyebrow" data-i18n="subjects">Subjek</div><h2 id="subjects-heading" data-i18n="chooseSubject">Pilih Subjek</h2></div>
-      <div class="subject-grid">
-        <article class="card subject-card subject-card--bm"><div class="subject-card__icon" aria-hidden="true">📝</div><h3>Bahasa Melayu</h3><p>Fahami bahasa. Susun idea. Bina ayat dengan yakin.</p><p class="subject-card__topics">Sistem Bahasa • SKOP • Kefahaman • Pemetaan Idea</p><a class="btn btn--secondary" href="subjects/bahasa-melayu/index.html" data-i18n="learnBM">Belajar Bahasa Melayu</a></article>
-        <article class="card subject-card subject-card--english"><div class="subject-card__icon" aria-hidden="true">🔤</div><h3>English</h3><p>Read the clues. Understand the sentence. Build your answer.</p><p class="subject-card__topics">Grammar • Keyword Decoding • Reading Comprehension</p><a class="btn btn--secondary" href="subjects/english/index.html" data-i18n="learnEnglish">Learn English</a></article>
-        <article class="card subject-card subject-card--math"><div class="subject-card__icon" aria-hidden="true">➗</div><h3>Matematik</h3><p>Lihat. Faham. Modelkan. Kira.</p><p class="subject-card__topics">Nombor • Operasi • Pecahan • Masa • Wang</p><a class="btn btn--secondary" href="subjects/matematik/index.html" data-i18n="learnMath">Belajar Matematik</a></article>
-        <article class="card subject-card subject-card--science"><div class="subject-card__icon" aria-hidden="true">🔬</div><h3>Sains</h3><p>Perhati. Fikir. Cari bukti. Terangkan.</p><p class="subject-card__topics">KPS • Pemerhatian • Inferens • Eksperimen</p><a class="btn btn--secondary" href="subjects/sains/index.html" data-i18n="learnScience">Belajar Sains</a></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" aria-labelledby="flow-heading">
-    <div class="container">
-      <div class="center"><h2 id="flow-heading" data-i18n="howLearningWorks">Cara Belajar di Learn2Step4ward</h2></div>
-      <div class="learning-flow">
-        <div class="learning-step"><span class="learning-step__number">1</span><h3 data-i18n="learn">Belajar</h3><p>Baca penerangan ringkas dan fokus kepada satu konsep.</p></div>
-        <div class="learning-step"><span class="learning-step__number">2</span><h3 data-i18n="try">Cuba</h3><p>Cuba sendiri sebelum melihat bantuan.</p></div>
-        <div class="learning-step"><span class="learning-step__number">3</span><h3 data-i18n="hint">Petunjuk</h3><p>Gunakan petunjuk apabila benar-benar diperlukan.</p></div>
-        <div class="learning-step"><span class="learning-step__number">4</span><h3 data-i18n="check">Semak</h3><p>Semak jawapan dan fahami penerangan.</p></div>
-        <div class="learning-step"><span class="learning-step__number">5</span><h3 data-i18n="tryAgain">Cuba Semula</h3><p>Cuba semula selepas memahami kesalahan.</p></div>
-        <div class="learning-step"><span class="learning-step__number">6</span><h3 data-i18n="moveForward">Maju</h3><p>Teruskan apabila konsep sudah lebih jelas.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section--compact"><div class="container"><div class="notice notice--hint"><h2 data-i18n="mistakesHeading">Salah Bukan Bermaksud Gagal</h2><p>Di Learn2Step4ward, kesalahan digunakan untuk mengetahui apa yang perlu diperbaiki. Kenal pasti sama ada kesalahan melibatkan Fakta, Konsep atau Kecuaian, kemudian cuba semula.</p></div></div></section>
-
-  <section class="section"><div class="container grid grid--2"><div class="card"><h2 data-i18n="practice">Latihan</h2><p>Gunakan Quick Practice, Topic Practice, Mixed Practice atau Challenge.</p><a class="btn btn--primary" href="practice/index.html" data-i18n="practiceCta">Cuba Latihan</a></div><div class="card"><h2 data-i18n="resources">Resources</h2><p>Nota, worksheets, penerangan jawapan, revision packs dan quick reference.</p><a class="btn btn--secondary" href="resources/index.html" data-i18n="viewResources">Lihat Resources</a></div></div></section>
-
-  <section class="section--compact"><div class="container"><h2 class="center" data-i18n="forAdults">Untuk Orang Dewasa</h2><div class="grid grid--2"><div class="card"><h3 data-i18n="teachers">Teachers</h3><p>Bahan sokongan untuk pengajaran, pengukuhan, intervensi dan latihan kendiri.</p><a class="btn btn--secondary" href="teachers/index.html">Teacher Dashboard</a></div><div class="card"><h3 data-i18n="parents">Ibu Bapa</h3><p>Panduan membantu anak belajar tanpa terus memberikan jawapan.</p><a class="btn btn--secondary" href="parents/index.html">Parent Dashboard</a></div></div></div></section>
 </main>
-
 
 <footer class="site-footer">
   <div class="container footer-grid">
@@ -128,6 +242,5 @@
 </footer>
 <script src="assets/js/app.js" defer></script>
 <script src="assets/js/language.js" defer></script>
-
 </body>
 </html>
