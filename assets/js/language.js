@@ -21,9 +21,17 @@
 
   async function loadLocale(language) {
     const url = new URL(`locales/${language}.json`, siteRoot);
-    const response = await fetch(url);
-    if (!response.ok) throw new Error(`Locale load failed: ${response.status}`);
-    return response.json();
+    try {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`Locale load failed: ${response.status}`);
+      return await response.json();
+    } catch (error) {
+      // Home-only fallback for direct file:// previews. Hosted versions continue
+      // to use the JSON locale files as the normal source of interface strings.
+      const fallback = window.L2S_HOME_LOCALES?.[language];
+      if (fallback) return fallback;
+      throw error;
+    }
   }
 
   function applyTranslations(strings) {
@@ -31,6 +39,20 @@
       const key = element.dataset.i18n;
       if (Object.prototype.hasOwnProperty.call(strings, key)) {
         element.textContent = strings[key];
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-aria-label]').forEach((element) => {
+      const key = element.dataset.i18nAriaLabel;
+      if (Object.prototype.hasOwnProperty.call(strings, key)) {
+        element.setAttribute('aria-label', strings[key]);
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-content]').forEach((element) => {
+      const key = element.dataset.i18nContent;
+      if (Object.prototype.hasOwnProperty.call(strings, key)) {
+        element.setAttribute('content', strings[key]);
       }
     });
   }

@@ -542,6 +542,10 @@ html[data-theme="dark"] .home-page {
 .home-subject-tab--math { --tab-color: #9566c6; }
 .home-subject-tab--science { --tab-color: #54a86c; }
 
+html[data-theme="dark"] .home-subject-tab {
+  color: #17395D;
+}
+
 .home-scene {
   position: relative;
   min-height: 560px;
